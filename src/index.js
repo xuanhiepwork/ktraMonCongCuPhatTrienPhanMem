@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 // 2. Route xử lý đăng nhập
-app.post('/login', (req, res) => 
+app.post('/login', (req, res) => { 
     const username = req.body.txtUserName;
     const password = req.body.txtpassword;
 
