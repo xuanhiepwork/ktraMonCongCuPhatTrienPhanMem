@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3005;
+const PORT = 4000;
 console.log("------------------------------------");
 console.log("Bên A: Hệ thống đang chạy chế độ bảo mật");
 console.log("Cổng kết nối đã được thay đổi sang 3005");
