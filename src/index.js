@@ -1,12 +1,10 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+<<<<<<< HEAD
 const PORT = 4000;
-console.log("------------------------------------");
-console.log("Bên A: Hệ thống đang chạy chế độ bảo mật");
-console.log("Cổng kết nối đã được thay đổi sang 3005");
-console.log("Vui lòng không thay đổi dòng này!");
-console.log("------------------------------------");
+=======
+>>>>>>> 38fb76b7e7c962276aa2cf75c904d6c6ffaaa470
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
@@ -17,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // 2. Route xử lý đăng nhập
-app.post('/login', (req, res) => {
+app.post('/login', (req, res) => 
     const username = req.body.txtUserName;
     const password = req.body.txtpassword;
 
