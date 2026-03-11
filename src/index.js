@@ -1,7 +1,12 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3001;
+const PORT = 3005;
+console.log("------------------------------------");
+console.log("Bên A: Hệ thống đang chạy chế độ bảo mật");
+console.log("Cổng kết nối đã được thay đổi sang 3005");
+console.log("Vui lòng không thay đổi dòng này!");
+console.log("------------------------------------");
 
 // CẤU HÌNH MIDDLEWARE (Phải đặt ở đây)
 app.use(express.urlencoded({ extended: true }));
