@@ -18,3 +18,23 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server đang chạy tại http://localhost:${PORT}`);
 });
+
+app.use(express.urlencoded({ extended: true })); // Để đọc dữ liệu từ Form
+
+// Route xử lý đăng nhập
+app.post('/login', (req, res) => {
+    // Lưu ý: txtUserName và txtpassword phải khớp với thuộc tính 'name' trong file HTML
+    const username = req.body.txtUserName;
+    const password = req.body.txtpassword;
+
+    if (username === 'admin' && password === 'admin') {
+        // Chuyển hướng sang trang thành công (Bạn nhớ tạo file thành công nhé)
+        res.send(`
+            <h1>Đăng nhập thành công!</h1>
+            <p>Chào mừng Admin.</p>
+            <a href="/">Quay lại</a>
+        `);
+    } else {
+        res.send('<h1>Đăng nhập thất bại!</h1><p>Sai tài khoản hoặc mật khẩu.</p><a href="/">Thử lại</a>');
+    }
+});
