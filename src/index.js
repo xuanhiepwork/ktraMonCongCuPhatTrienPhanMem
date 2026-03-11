@@ -12,28 +12,16 @@ app.get('/', (req, res) => {
 });
 
 // 2. Route xử lý đăng nhập
-app.post('/login', (req, res) => { 
-    const username = req.body.txtUserName;
-    const password = req.body.txtpassword;
+app.post('/login', (req, res) => {
+    const { txtUserName, txtpassword } = req.body;
+    console.log(`Tiến trình xử lý đăng nhập cho: ${txtUserName}`);
 
-    console.log("User login attempt:", username); // thêm dòng này
-
-    if (username === 'admin' && password === 'admin') {
-        res.send(`
-            <div style="text-align: center; margin-top: 50px;">
-                <h1 style="color: green;">Đăng nhập thành công!</h1>
-                <p>Chào mừng Admin hệ thống.</p>
-                <a href="/">Quay lại trang chủ</a>
-            </div>
-        `);
+    // Kiểm tra tài khoản admin/admin theo yêu cầu đề bài
+    if (txtUserName === 'admin' && txtpassword === 'admin') {
+        console.log("Xác thực thành công. Chuyển hướng...");
+        res.sendFile(path.join(__dirname, '../views/success.html'));
     } else {
-        res.send(`
-            <div style="text-align: center; margin-top: 50px;">
-                <h1 style="color: red;">Đăng nhập thất bại!</h1>
-                <p>Sai tài khoản hoặc mật khẩu.</p>
-                <a href="/">Thử lại</a>
-            </div>
-        `);
+        res.status(401).send('Tài khoản hoặc mật khẩu không chính xác!');
     }
 });
 
