@@ -86,15 +86,14 @@
             <h4>Login System</h4>
             <div class="templatemo_right_section_content">
                 <form method="post" action="/login">
-                    <div class="login-block">
-                        <label>Tên đăng nhập:</label>
-                        <input name="txtUserName" type="text" id="txtUserName" placeholder="Username" />
-                        <br />
-                        <label>Password:</label>
-                        <input name="txtpassword" type="password" id="txtpassword" placeholder="Password" />
-                        <br />
-                        <input type="submit" name="submit" class="button" id="btnlogin" value="Đăng nhập hệ thống" />
-                    </div>
+                    <label>Tên đăng nhập:</label>
+                    <input name="txtUserName" type="text" id="textboxusername" style="width:150px; margin-bottom:10px;" />
+                    <br />
+                    <label>Mật khẩu:</label>
+                    <input name="txtpassword" type="password" id="textboxmatkhau" style="width:150px; margin-bottom:10px;" />
+                    <br />
+                    <p style="font-size: 10px; color: gray;">* Vui lòng sử dụng tài khoản admin để truy cập.</p>
+                    <input type="submit" name="submit" class="button" id="btnlogin" value="Đăng nhập" />
                 </form>
             </div>
         </div>
