@@ -16,6 +16,8 @@ app.post('/login', (req, res) => {
     const username = req.body.txtUserName;
     const password = req.body.txtpassword;
 
+    console.log("User login attempt:", username); // thêm dòng này
+
     if (username === 'admin' && password === 'admin') {
         res.send(`
             <div style="text-align: center; margin-top: 50px;">
