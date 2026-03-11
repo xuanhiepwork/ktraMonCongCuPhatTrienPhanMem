@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 4000;
+<<<<<<< HEAD
+=======
+>>>>>>> 38fb76b7e7c962276aa2cf75c904d6c6ffaaa470
 
 // CẤU HÌNH MIDDLEWARE (Phải đặt ở đây)
 app.use(express.urlencoded({ extended: true }));
