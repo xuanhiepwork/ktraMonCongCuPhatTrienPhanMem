@@ -1,10 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-<<<<<<< HEAD
 const PORT = 4000;
-=======
->>>>>>> 38fb76b7e7c962276aa2cf75c904d6c6ffaaa470
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
